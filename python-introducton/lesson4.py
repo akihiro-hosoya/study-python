@@ -83,3 +83,12 @@ while True:
 print(total)
 
 #-----------関数----------
+def tashizan(j,k):
+    total=0
+    for l in range(j, k+1):
+        total = total + l
+    return total  #結果を返す
+
+m = tashizan(1,5) #関数を実行する。（）内は引数
+print(m)#callする
+
