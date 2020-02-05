@@ -5,8 +5,12 @@ import tkinter.messagebox as tmsg
 
 #ボタンがクリックされたときに実行される関数を作成する
 def ButtonClick():
-    tmsg.showinfo('テスト', 'クリックされたよ')
+    #テキスト入力欄の文字列を取得
+    b = editbox1.get()
+    # メッセージとして表示
+    tmsg.showinfo('入力されたテキスト', b)
 
+#ウィンドウを作る
 root = tk.Tk() #tkinterでウィンドウを表示するときの決まり文句
 #geometryメソッド
 root.geometry('400x150') #ウィンドウサイズを変更する
