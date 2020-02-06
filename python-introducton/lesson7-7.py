@@ -4,8 +4,8 @@ import tkinter as tk
 # 円をリストで用意する
 balls = [
     {'x':400, 'y':300, 'dx':1, 'dy':1, 'color':'red'},
-    {'x':200, 'y':100, 'dx':1, 'dy':1, 'color':'green'},
-    {'x':300, 'y':200, 'dx':1, 'dy':1, 'color':'blue'}
+    {'x':200, 'y':100, 'dx':-1, 'dy':1, 'color':'green'},
+    {'x':300, 'y':200, 'dx':1, 'dy':-1, 'color':'blue'}
 ]
 
 def move():
@@ -18,7 +18,7 @@ def move():
         # y座標を動かす
         b['y'] = b['y'] + b['dy']
         # 次の位置に円を描く
-        canvas.create_oval(b['x']-20, b['y']+20, b['x']+20, b['y']+20, fill=b['color'], width=0)
+        canvas.create_oval(b['x']-20, b['y']-20, b['x']+20, b['y']+20, fill=b['color'], width=0)
         # 端を超えたら反対向きにする
         if b['x'] >= canvas.winfo_width():
             b['dx'] = -1
@@ -29,7 +29,7 @@ def move():
         if b['y'] <= 0:
             b['dy'] = +1
         # 再びタイマー
-        root.after(10, move)
+    root.after(10, move)
 
 # ウィンドウを描く
 root = tk.Tk()
