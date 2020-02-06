@@ -4,8 +4,10 @@ import tkinter as tk
 # 円をリストで用意する
 balls = [
     {'x':400, 'y':300, 'dx':1, 'dy':1, 'color':'red'},
-    {'x':200, 'y':100, 'dx':-1, 'dy':1, 'color':'green'},
-    {'x':300, 'y':200, 'dx':1, 'dy':-1, 'color':'blue'}
+    {'x':200, 'y':100, 'dx': -1, 'dy':1, 'color':'green'},
+    {'x':300, 'y':200, 'dx':1, 'dy': -1, 'color':'blue'},
+    {'x':50, 'y':400, 'dx':-1, 'dy': 1, 'color':'purple'},
+    {'x':400, 'y':100, 'dx':1, 'dy': 1, 'color':'yellow'}
 ]
 
 def move():
@@ -40,6 +42,6 @@ canvas = tk.Canvas(root, width=600, height=400, bg="white")
 canvas.place(x=0, y=0)
 
 # タイマーを設定する
-root.after(10,move)
+root.after(10, move)
 
 root.mainloop()
