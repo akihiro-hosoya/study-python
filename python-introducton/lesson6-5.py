@@ -49,17 +49,19 @@ def ButtonClick():
         # 当たりではないとき
         else:
             # ヒット数とブロー数を表示
-            tmsg.showinfo('ヒット', 'ヒット'+str(hit)+'/'+'ブロー'+str(blow))
+            rirekibox.insert(tk.END, b +'　／H:'+str(hit) + ' B:'+str(blow) + '\n')
 
 # メインのプログラム
 # 最初にランダムな4つの数字を作成しておく
 a = [random.randint(0,9), random.randint(0,9), random.randint(0,9), random.randint(0,9)]
 # ウィンドウを作る
 root = tk.Tk() #tkinterでウィンドウを表示するときの決まり文句
-# geometryメソッド
-root.geometry('400x150') #ウィンドウサイズを変更する
-# titleメソッド
+root.geometry('600x400') #ウィンドウサイズを変更する
 root.title('数当てゲーム')
+
+# 履歴欄を作る
+rirekibox = tk.Text(root, font=('Helvetica', 14))
+rirekibox.place(x=400, y=0, width=200, height=400)
 
 # ラベルを作る
 label1 = tk.Label(root, text='数を入力してね', font=('Helvetica', 14)) 
