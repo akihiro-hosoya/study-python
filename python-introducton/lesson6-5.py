@@ -13,13 +13,13 @@ def ButtonClick():
     isok = False
     # 4桁かどうか調べる
     if len(b) != 4: # 違う場合
-        print('4桁の数字を入力してください')
+        tmsg.showerror('エラー', '4桁の数字を入力してください')
     else: # 4桁の場合
         kazuok = True
         # 4桁が全部数字かどうか調べる
         for i in range(4): # 4回繰り返し
             if (b[i]<'0') or (b[i]>'9'):
-                print('数字ではありません')
+                tmsg.showerror('エラー', '数字ではありません')
                 kazuok = False # 数字ではないということ
                 break
         if kazuok : # 全部が数字で上の処理が実行されない状態なら全体としてOKであることを示す
