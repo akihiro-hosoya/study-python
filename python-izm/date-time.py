@@ -45,3 +45,11 @@ print(newyear + datetime.timedelta(days=7))
 calc = newyear - today
 # 計算結果の戻り値は「timedelta」
 print(calc.days)
+
+# 閏年の判定
+import calendar
+
+print(calendar.isleap(2015))
+print(calendar.isleap(2016))
+#指定期間内に何回の閏年があるか調べる
+print(calendar.leapdays(2010, 2020))
