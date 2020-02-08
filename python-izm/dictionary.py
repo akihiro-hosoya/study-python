@@ -31,3 +31,23 @@ test_dict_1['YEAR'] = '2010'
 test_dict_1['MONTH'] = '1'
 test_dict_1['DAY'] = '20'
 print(test_dict_1)
+
+
+# 要素の削除
+print(test_dict_1)
+
+del test_dict_1['DAY']
+print(test_dict_1)
+
+
+# keyやvalueだけを取得する
+test_dict_1 = {'YEAR':'2010', 'MONTH':'1', 'DAY':'20'}
+print(test_dict_1)
+
+print(test_dict_1.keys()) # keyだけを取得
+print(test_dict_1.values()) # valueだけを取得
+
+
+# keyを保持しているかの確認
+print('YEAR' in test_dict_1)
+print('YEARS' in test_dict_1)
