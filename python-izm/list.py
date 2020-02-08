@@ -40,3 +40,10 @@ print(test_list_1)
 print(test_list_1.pop()) # 末尾が削除
 print(test_list_1)
 
+# 要素のインデックスを取得
+test_list_1 = ['100', '200', '300', '200', '100']
+print(test_list_1.index('200')) # 最初のインデックス値のみ返される
+
+# リスト内での要素数を取得
+print(test_list_1.count('200'))
+
