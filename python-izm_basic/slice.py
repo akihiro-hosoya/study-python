@@ -26,7 +26,7 @@ print(test_list)
 
 # コメントアウト
 # 複数行の場合
-# ’’’
-# print('test 3')
-# print('test 4')
-# '''
+'''
+print('test 3')
+print('test 4')
+'''

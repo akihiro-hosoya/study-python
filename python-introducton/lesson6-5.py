@@ -53,7 +53,12 @@ def ButtonClick():
 
 # メインのプログラム
 # 最初にランダムな4つの数字を作成しておく
-a = [random.randint(0,9), random.randint(0,9), random.randint(0,9), random.randint(0,9)]
+a = [
+    random.randint(0,9), 
+    random.randint(0,9), 
+    random.randint(0,9), 
+    random.randint(0,9)
+    ]
 # ウィンドウを作る
 root = tk.Tk() #tkinterでウィンドウを表示するときの決まり文句
 root.geometry('600x400') #ウィンドウサイズを変更する

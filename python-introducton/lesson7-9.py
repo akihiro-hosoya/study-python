@@ -23,11 +23,11 @@ class Ball:
         if self.x >= canvas.winfo_width():
             self.dx = -1
         if self.x <= 0:
-            self.dx = +1
+            self.dx = 1
         if self.y >= canvas.winfo_height():
             self.dy = -1
         if self.y <= 0:
-            self.dy = +1
+            self.dy = 1
     def erase(self, canvas):
         canvas.create_oval(self.x-21, self.y-21, self.x+21, self.y+21, fill='white', width=0)
     def draw(self, canvas):
@@ -48,17 +48,17 @@ class Triangle(Ball):
 # 図形を作成
 balls = [
     # 円を作成
-    Ball(500, 300, 1, 1, 'red'),
+    Ball(500, 300, -1, -1, 'red'),
     # 四角形を作成
-    Rectangle(400, 300, -1, 1, 'red'),
+    Rectangle(400, 300, -1, 1, 'blue'),
     # 三角形を作成
     Triangle(300, 200, 1, -1, 'red')
 ]
 
 def loop():
     # 動かす
-    for b in balls: # ballから1つずつ取り出す
-        b.move(canvas) # 動かせと命令する
+    for ball in balls: # ballから1つずつ取り出す
+        ball.move(canvas) # 動かせと命令する
     # もう1回
     root.after(10, loop)
 
