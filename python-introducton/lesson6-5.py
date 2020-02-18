@@ -32,12 +32,20 @@ def ButtonClick():
         for i in range(4):
             if a[i] == int(b[i]):
                 hit = hit + 1
-        
+        print('a', a)
+        print('b', b)
         # ブローを判定
         blow = 0
         for j in range(4):
             for i in range(4):
+                """
+                print('a[j]', a[j])
+                print('a[i]', a[i])
+                print('b[j]', b[j])
+                print('b[i]', b[i])
+                """
                 if (int(b[j]) == a[j]) and (a[i] != int(b[i])) and (a[j] != int(b[j])):
+                    print('blow ',blow)
                     blow = blow + 1
                     break
         
