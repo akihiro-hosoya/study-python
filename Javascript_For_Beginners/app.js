@@ -1,3 +1,4 @@
-var life = 100 ;
+const test = document.querySelector(".title");
+const changeColor = document.querySelector('.changeColor');
 
-console.log('Hey Dev Ed');
+text.style.color = "red";
