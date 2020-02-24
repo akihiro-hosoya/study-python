@@ -44,7 +44,7 @@ def ButtonClick():
                 print('b[j]', b[j])
                 print('b[i]', b[i])
                 """
-                if (int(b[j]) == a[j]) and (a[i] != int(b[i])) and (a[j] != int(b[j])):
+                if (int(b[j]) == a[i]) and (a[i] != int(b[i])) and (a[j] != int(b[j])):
                     print('blow ',blow)
                     blow = blow + 1
                     break
